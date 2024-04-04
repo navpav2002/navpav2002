@@ -1,0 +1,33 @@
+name: Daily Update README with GitHub Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Update README
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          # Dein Befehl hier, der das GH_TOKEN nutzt
+          # Zum Beispiel: node updateReadme.js
+          echo "Hier könnte dein Befehl stehen, der GH_TOKEN nutzt"
+
+      - name: Commit and Push if Changed
+        run: |
+          git config --global user.email "you@example.com"
+          git config --global user.name "GitHub Actions"
+          git add README.md
+          git commit -m "Automatically update README" -a || echo "No changes to commit"
+          git push
