@@ -4,9 +4,8 @@
 
 <p><br><br><br><br></p>
 
-### My stats ⭐
 <div style="display: inline_block", align="center">
-	<h3>GitHub Stats</h3>
+	<h3>My stats ⭐</h3>
 	<br>
     <a href="#">
         <!--<img height="200px" align="center" src="https://github-readme-stats-lime-kappa.vercel.app/api?username=vitorabujamra&show_icons=true&theme=dark">-->
