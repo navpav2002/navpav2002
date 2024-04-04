@@ -1,4 +1,8 @@
-### Hi there 👋
+<div style="display: inline_block", align="center">
+	<h3>Hi there 👋</h3>
+</div>
+
+<p><br><br><br><br></p>
 
 ### My stats ⭐
 <div style="display: inline_block", align="center">
