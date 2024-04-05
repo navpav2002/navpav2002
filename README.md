@@ -15,3 +15,7 @@
         <img height="200px" wigth="400px" align="center" src="https://github-readme-stats-lime-kappa.vercel.app/api/top-langs/?username=navpav2002&theme=dark&exclude_repo=github-readme-stats&hide=Python,XSLT,Vue,Roff,Pascal,SCSS,Java,Scheme&langs_count=8&layout=compact">
     </a>
 </div>
+
+<!--languages-start-->
+<!-- Hier wird die automatisch generierte Sprachstatistik angezeigt -->
+<!--languages-end-->
