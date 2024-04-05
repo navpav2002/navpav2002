@@ -18,8 +18,9 @@
 
 <!--languages-start-->
 <a href="#">
-        <img height="200px" wigth="400px" align="center" src="https://github-readme-stats-lime-kappa.vercel.app/api/top-langs/?username=navpav2002&theme=dark&exclude_repo=github-readme-stats&hide=XSLT,Vue,Roff,Pascal,SCSS,Java,Scheme&langs_count=8&layout=compact">
-    </a>
+    <img height="200px" wigth="400px" align="center" src="https://github-readme-stats-lime-kappa.vercel.app/api/top-langs/?username=navpav2002&theme=dark&exclude_repo=github-readme-stats&hide=XSLT,Vue,Roff,Pascal,SCSS,Java,Scheme&langs_count=8&layout=compact">
+</a>
+
 <div style="display: inline_block", align="center">
     <h3>Sprachstatistiken 📊</h3>
     <table>
@@ -53,4 +54,5 @@
         </tr>
     </table>
 </div>
+
 <!--languages-end-->
