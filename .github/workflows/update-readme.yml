@@ -23,7 +23,13 @@ jobs:
         env:
           STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
         run: python fetch_languages.py
-        
+
+      - name: Verify LANGUAGES.md creation
+        run: |
+          ls -la
+          cat LANGUAGES.md
+          git status
+      
       - name: Update README
         run: |
           LANG_STATS=$(cat LANGUAGES.md)
