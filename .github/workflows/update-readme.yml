@@ -1,0 +1,38 @@
+name: Update README with Language Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Запуск ежедневно в полночь UTC
+  workflow_dispatch:  # Позволяет запускать вручную
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          
+      - name: Install dependencies
+        run: pip install requests
+        
+      - name: Fetch Language Statistics
+        env:
+          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
+        run: python fetch_languages.py
+        
+      - name: Update README
+        run: |
+          LANG_STATS="$(cat LANGUAGES.md)"
+          sed -i "/<!--languages-start-->/, /<!--languages-end-->/c\<!--languages-start-->\n${LANG_STATS}\n<!--languages-end-->" README.md
+          
+      - name: Commit and push if changed
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md LANGUAGES.md
+          git commit -m "Update language statistics in README" -a || echo "No changes to commit"
+          git push
