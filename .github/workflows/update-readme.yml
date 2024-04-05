@@ -26,8 +26,9 @@ jobs:
         
       - name: Update README
         run: |
-          LANG_STATS="$(cat LANGUAGES.md)"
-          sed -i "/<!--languages-start-->/, /<!--languages-end-->/c\<!--languages-start-->\n${LANG_STATS}\n<!--languages-end-->" README.md
+          LANG_STATS=$(cat LANGUAGES.md)
+          awk -v lang_stats="$LANG_STATS" '/<!--languages-start-->/{print;print lang_stats;next}/<!--languages-end-->/{flag=0}flag;/<!--languages-start-->/{flag=1}' README.md > temp_README.md && mv temp_README.md README.md
+
           
       - name: Commit and push if changed
         run: |
