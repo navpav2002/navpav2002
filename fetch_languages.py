@@ -27,3 +27,4 @@ with open('LANGUAGES.md', 'w') as file:
     file.write(languages_str)
 print(response.json())
 print(f'Schreibe Sprachstatistik in LANGUAGES.md: \n{languages_str}')
+print(f"Speichern der Daten in {os.path.abspath('LANGUAGES.md')}")
