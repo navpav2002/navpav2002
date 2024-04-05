@@ -37,7 +37,7 @@ for repo in repos:
         print(f"Fehler beim Abrufen der Daten für Repo {repo}: {response.text}")
 
 # Festlegen einer Liste von Farben für die Balken
-colors = ['#33FFF3', '#33FF57', '#3357FF', '#DFFF00', '#FF33F0', '#ff0000']
+colors = ['#33FFF3', '#008000', '#0000ff', '#DFFF00', '#FF33F0', '#ff0000']
 
 # Erstellen des Balkendiagramms
 languages = list(all_languages.keys())
