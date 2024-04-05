@@ -2,7 +2,7 @@ name: Update README with Language Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Täglich um Mitternacht UTC
+    - cron: '0 0 * * *'  
   workflow_dispatch:
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.STATS_TOKEN }}  # Verwenden Sie Ihr PAT für den Checkout
+          token: ${{ secrets.STATS_TOKEN }} 
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -22,7 +22,7 @@ jobs:
         run: pip install requests matplotlib
       
       - name: Fetch Language Statistics and Generate Chart
-        run: python fetch_and_plot.py
+        run: python fetch_languages.py
         env:
           STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
       
