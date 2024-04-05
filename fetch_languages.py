@@ -18,7 +18,7 @@ repos = [
     'navpav2002/Assembly',
     'navpav2002/Docker_INT',
     'navpav2002/JS-AA1',
-    'navpav2002/Web_prog
+    'navpav2002/Web_prog'
 ]
 
 all_languages = {}
