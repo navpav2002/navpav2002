@@ -2,7 +2,7 @@ import os
 import requests
 
 # Замените 'owner/repo' на владельца и название вашего репозитория
-repo = 'owner/repo'
+repo = 'navpav2002/navpav2002'
 token = os.getenv('STATS_TOKEN')
 
 headers = {
