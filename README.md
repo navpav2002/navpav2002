@@ -14,6 +14,7 @@
         <img height="200px" align="center" src="https://github-readme-stats-lime-kappa.vercel.app/api/top-langs/?username=navpav2002&theme=dark&langs_count=8&layout=compact">
     </a>
 </div>
+![Language Usage Chart](languages_usage_chart.png)
 
 <!--languages-start-->
 <!-- Hier wird die automatisch generierte Sprachstatistik angezeigt -->
