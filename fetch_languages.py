@@ -1,21 +1,27 @@
 import os
 import requests
 
-# Замените 'owner/repo' на владельца и название вашего репозитория
-repo = 'navpav2002/navpav2002'
 token = os.getenv('STATS_TOKEN')
-
 headers = {
     'Authorization': f'token {token}',
     'Accept': 'application/vnd.github.v3+json',
 }
 
-response = requests.get(f'https://api.github.com/repos/{repo}/languages', headers=headers)
-languages = response.json()
+# Ersetzen Sie dies mit einer Liste Ihrer Repositories
+repos = ['navpav2002/react-int', 'navpav2002/Assembly', 'navpav2002/Docker_INT', 'navpav2002/JS-AA1']
 
-# Преобразование статистики языков в строку для сохранения в файл
-languages_str = '\n'.join([f'{lang}: {size}' for lang, size in languages.items()])
+all_languages = {}
 
-# Сохранение статистики языков в файл
+for repo in repos:
+    response = requests.get(f'https://api.github.com/repos/{repo}/languages', headers=headers)
+    repo_languages = response.json()
+    for language, size in repo_languages.items():
+        if language in all_languages:
+            all_languages[language] += size
+        else:
+            all_languages[language] = size
+
+languages_str = '\n'.join([f'{lang}: {size}' for lang, size in all_languages.items()])
+
 with open('LANGUAGES.md', 'w') as file:
     file.write(languages_str)
