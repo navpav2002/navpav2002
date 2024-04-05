@@ -37,14 +37,17 @@ for repo in repos:
 languages = list(all_languages.keys())
 sizes = list(all_languages.values())
 
+# Festlegen einer Liste von Farben für die Balken
+colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF', '#FF33F0', '#33FFF3']
+
 plt.figure(figsize=(10, 8))
-bars = plt.bar(languages, sizes, color='blue')
+bars = plt.bar(languages, sizes, color=colors)
 
 # Hintergrund und Schriftfarben festlegen
 # plt.gcf().set_facecolor('black')
 # plt.gca().set_facecolor('black')
-# plt.xticks(color='white')
-# plt.yticks(color='white')
+plt.xticks(color='white')
+plt.yticks(color='white')
 plt.xlabel('Languages', color='white')
 plt.ylabel('Bytes of Code', color='white')
 plt.title('Programming Languages Usage', color='white')
@@ -54,7 +57,7 @@ for spine in plt.gca().spines.values():
     spine.set_color('white')
 
 # Beschriftungen auf den Balken hinzufügen
-for bar in bars:
+for bar, language in zip(bars, languages):
     yval = bar.get_height()
     plt.text(bar.get_x() + bar.get_width()/2.0, yval, f'{int(yval)}', va='bottom', ha='center', color='white')
 
