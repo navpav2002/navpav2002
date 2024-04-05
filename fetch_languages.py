@@ -41,8 +41,8 @@ plt.figure(figsize=(10, 8))
 bars = plt.bar(languages, sizes, color='blue')
 
 # Hintergrund und Schriftfarben festlegen
-plt.gcf().set_facecolor('black')
-plt.gca().set_facecolor('black')
+# plt.gcf().set_facecolor('black')
+# plt.gca().set_facecolor('black')
 plt.xticks(color='white')
 plt.yticks(color='white')
 plt.xlabel('Languages', color='white')
