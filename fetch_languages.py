@@ -31,7 +31,7 @@ for repo in repos:
     else:
         print(f"Fehler beim Abrufen der Daten für Repo {repo}: {response.text}")
 
-colors = ['#33FFF3', '#008000', '#0000ff', '#DFFF00', '#FF33F0', '#ff0000']
+colors = ['#33FFF3', '#008000', '#0000ff', '#ffff00', '#FF33F0', '#ff0000']
 
 languages = list(all_languages.keys())
 sizes = list(all_languages.values())
