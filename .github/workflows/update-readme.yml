@@ -36,7 +36,10 @@ jobs:
       - name: Update README
         run: |
           LANG_STATS=$(cat LANGUAGES.md)
-          awk -v lang_stats="$LANG_STATS" '/<!--languages-start-->/{print;print lang_stats;next}/<!--languages-end-->/{flag=0}flag;/<!--languages-start-->/{flag=1}' README.md > temp_README.md && mv temp_README.md README.md
+          awk -v lang_stats="$LANG_STATS" '/<!--languages-start-->/{print;print lang_stats;next}/<!--languages-end-->/{flag=0}flag;/<!--languages-start-->/{flag=1}' README.md > temp_README.md
+          cat temp_README.md  # Dies gibt den Inhalt von temp_README.md aus, um zu debuggen
+          mv temp_README.md README.md
+
 
           
       - name: Commit and push if changed
