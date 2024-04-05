@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.STATS_TOKEN }}  # Stellen Sie sicher, dass dies Ihr PAT ist, nicht das GITHUB_TOKEN
+          token: ${{ secrets.STATS_TOKEN }}  
 
       
       - name: Set up Python
