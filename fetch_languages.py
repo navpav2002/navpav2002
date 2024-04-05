@@ -7,7 +7,6 @@ headers = {
     'Accept': 'application/vnd.github.v3+json',
 }
 
-# Ersetzen Sie dies mit einer Liste Ihrer Repositories
 repos = ['navpav2002/react-int', 'navpav2002/Assembly', 'navpav2002/Docker_INT', 'navpav2002/JS-AA1']
 
 all_languages = {}
