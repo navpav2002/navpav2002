@@ -2,8 +2,8 @@ name: Update README with Language Stats
 
 on:
   schedule:
-    - cron: '0 0 * * *'  
-  workflow_dispatch:  
+    - cron: '0 0 * * *'  # Täglich um Mitternacht UTC
+  workflow_dispatch:
 
 jobs:
   update-readme:
@@ -11,43 +11,27 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.STATS_TOKEN }}  
+          token: ${{ secrets.STATS_TOKEN }}  # Verwenden Sie Ihr PAT für den Checkout
 
-      
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-          
+      
       - name: Install dependencies
-        run: pip install requests
-        
-      - name: Fetch Language Statistics
+        run: pip install requests matplotlib
+      
+      - name: Fetch Language Statistics and Generate Chart
+        run: python fetch_and_plot.py
         env:
           STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
-        run: python fetch_languages.py
-
-      - name: Verify LANGUAGES.md creation
-        run: |
-          ls -la
-          cat LANGUAGES.md
-          git status
       
-      - name: Update README
-        run: |
-          LANG_STATS=$(cat LANGUAGES.md)
-          awk -v lang_stats="$LANG_STATS" '/<!--languages-start-->/{print;print lang_stats;next}/<!--languages-end-->/{flag=0}flag;/<!--languages-start-->/{flag=1}' README.md > temp_README.md
-          cat temp_README.md  # Dies gibt den Inhalt von temp_README.md aus, um zu debuggen
-          mv temp_README.md README.md
-
-
-          
       - name: Commit and push if changed
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add README.md LANGUAGES.md  # Fügen Sie hier README.md hinzu, da dies die Datei ist, die geändert wurde
-          git commit -m "Update language statistics in LANGUAGES.md and README.md"
+          git add languages_usage_chart.png
+          git commit -m "Update programming languages usage chart" || echo "No changes to commit"
           git push
 
 
