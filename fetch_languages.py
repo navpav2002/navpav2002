@@ -26,3 +26,4 @@ languages_str = '\n'.join([f'{lang}: {size}' for lang, size in all_languages.ite
 with open('LANGUAGES.md', 'w') as file:
     file.write(languages_str)
 print(response.json())
+print(f'Schreibe Sprachstatistik in LANGUAGES.md: \n{languages_str}')
