@@ -65,6 +65,9 @@ for bar in bars:
 for spine in ax.spines.values():
     spine.set_color('white')
 
+ax.grid(which='major', linestyle='--', linewidth=0.5, color='grey')  # Hauptachsen
+ax.grid(which='minor', linestyle=':', linewidth=0.5, color='grey')  # Nebenachsen
+
 # Speichern des Diagramms als Bild mit einem dunklen Hintergrund
 diagram_path = 'languages_usage_chart.png'
 plt.savefig(diagram_path, bbox_inches='tight', facecolor='black')
