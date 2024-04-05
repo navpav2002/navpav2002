@@ -37,7 +37,7 @@ for repo in repos:
         print(f"Fehler beim Abrufen der Daten für Repo {repo}: {response.text}")
 
 # Festlegen einer Liste von Farben für die Balken
-colors = ['#FF5733', '#33FF57', '#3357FF', '#F033FF', '#FF33F0', '#33FFF3']
+colors = ['#33FFF3', '#33FF57', '#3357FF', '#DFFF00', '#FF33F0', '#ff0000']
 
 # Erstellen des Balkendiagramms
 languages = list(all_languages.keys())
@@ -64,6 +64,9 @@ for bar in bars:
 # Die weißen Achsenlinien und Ticks sicherstellen
 for spine in ax.spines.values():
     spine.set_color('white')
+    
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
 
 ax.grid(which='major', linestyle='--', linewidth=0.5, color='grey')  # Hauptachsen
 ax.grid(which='minor', linestyle=':', linewidth=0.5, color='grey')  # Nebenachsen
