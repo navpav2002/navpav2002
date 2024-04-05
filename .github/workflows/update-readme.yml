@@ -21,7 +21,7 @@ jobs:
         
       - name: Fetch Language Statistics
         env:
-          GH_TOKEN: ${{ secrets.STATS_TOKEN }}
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
         run: python fetch_languages.py
         
       - name: Update README
