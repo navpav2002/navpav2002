@@ -3,41 +3,42 @@ name: Update README with Language Stats
 on:
   schedule:
     - cron: '0 0 * * *'  
-  workflow_dispatch:
+  workflow_dispatch: 
 
 jobs:
   Run-npm-on-Ubuntu:
     name: Run npm on Ubuntu
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v4  
+      - uses: actions/setup-node@v4  
         with:
           node-version: '14'
-      - run: npm help
+      - run: npm help  
 
   update-readme:
-    runs-on: ubuntu-latest
+    name: Update README
+    runs-on: ubuntu-latest  
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4  
         with:
-          token: ${{ secrets.STATS_TOKEN }} 
+          token: ${{ secrets.STATS_TOKEN }}  
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v2  
         with:
-          python-version: '3.x'
+          python-version: '3.x'  
       
       - name: Install dependencies
-        run: pip install requests matplotlib
+        run: pip install requests matplotlib  
       
       - name: Fetch Language Statistics and Generate Chart
-        run: python fetch_languages.py
+        run: python fetch_languages.py 
         env:
-          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}  
       
       - name: Commit changes
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git diff --quiet || (git add languages_usage_chart.png && git commit -m "Update programming languages usage chart" && git push)
+          git config --global user.name 'github-actions[bot]'  # Konfiguriert Git mit einem Benutzernamen
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'  # Konfiguriert Git mit einer E-Mail-Adresse
+          git diff --quiet || (git add languages_usage_chart.png && git commit -m "Update programming languages usage chart" && git push)  # Committet die Änderungen, falls vorhanden
