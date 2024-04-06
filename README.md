@@ -3,7 +3,4 @@
     <br>
 </div>
 
-<!--languages-start-->
-<!-- Sprachnutzungsdiagramm -->
 ![Language Usage Chart](languages_usage_chart.png)
-<!--languages-end-->
