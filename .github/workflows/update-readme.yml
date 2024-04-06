@@ -2,7 +2,7 @@ name: Update README with Language Stats
 
 on:
   schedule:
-    - cron: '35 1 * * *'  
+    - cron: '43 1 * * *'  
   workflow_dispatch:
 
 jobs:
