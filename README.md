@@ -5,8 +5,8 @@
     </p>
     <br>
     <h3>My stats ⭐</h3>
-    ![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1E?style=flat&logo=javascript&logoColor=black)
-    ![HTML5](https://img.shields.io/badge/-HTML5-%23E34F26?style=flat&logo=html5&logoColor=white)
+        <a src="https://img.shields.io/badge/-JavaScript-%23F7DF1E?style=flat&logo=javascript&logoColor=black"/>
+        <a src="https://img.shields.io/badge/-HTML5-%23E34F26?style=flat&logo=html5&logoColor=white"/>
     <br>
 </div>
 
