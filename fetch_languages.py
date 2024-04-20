@@ -46,7 +46,7 @@ for repo in repos:
         print(f"Error fetching data for repo {repo}: {response.text}")
 
 # define custom colors for the bars in the bar chart
-colors = ['#33FFF3', '#008000', '#0000ff', '#ffff00', '#FF33F0', '#ff0000', '#FFA500']
+colors = ['#33FFF3', '#008000', '#0000ff', '#ffff00', '#FF33F0', '#ff0000', '#FFA500', '#adff2f']
 
 # extract languages and their sizes to lists for plotting
 languages = list(all_languages.keys())
