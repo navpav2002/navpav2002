@@ -25,7 +25,8 @@ repos = [
     'navpav2002/Docker_INT',
     'navpav2002/JS-AA1',
     'navpav2002/Web_prog',
-    'navpav2002/TestAppCPP1'
+    'navpav2002/TestAppCPP1',
+    'navpav2002/eth_smart-con-0.0.1'
 ]
 
 # initialize a dictionary to store language data
@@ -46,7 +47,7 @@ for repo in repos:
         print(f"Error fetching data for repo {repo}: {response.text}")
 
 # define custom colors for the bars in the bar chart
-colors = ['#33FFF3', '#008000', '#0000ff', '#ffff00', '#FF33F0', '#ff0000', '#FFA500', '#adff2f']
+colors = ['#33FFF3', '#008000', '#0000ff', '#ffff00', '#FF33F0', '#ff0000', '#FFA500', '#adff2f', '#ECF0F1', '#DE3163']
 
 # extract languages and their sizes to lists for plotting
 languages = list(all_languages.keys())
