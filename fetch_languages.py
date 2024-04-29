@@ -26,7 +26,8 @@ repos = [
     'navpav2002/JS-AA1',
     'navpav2002/Web_prog',
     'navpav2002/TestAppCPP1',
-    'navpav2002/eth_smart-con-0.0.1'
+    'navpav2002/eth_smart-con-0.0.1',
+    'navpav2002/ThreeJS-Blender-React-Fiber-TestWeb'
 ]
 
 # initialize a dictionary to store language data
