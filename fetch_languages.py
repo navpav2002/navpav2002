@@ -29,7 +29,8 @@ repos = [
     'navpav2002/eth_smart-con-0.0.1',
     'navpav2002/ThreeJS-Blender-React-Fiber-TestWeb',
     'navpav2002/SpamBot-PY',
-    'navpav2002/AppVS_1'
+    'navpav2002/AppVS_1',
+    'navpav2002/Codeforces',
 ]
 
 # initialize a dictionary to store language data
@@ -50,7 +51,7 @@ for repo in repos:
         print(f"Error fetching data for repo {repo}: {response.text}")
 
 # define custom colors for the bars in the bar chart
-colors = ['#33FFF3', '#008000', '#0000ff', '#ffff00', '#FF33F0', '#ff0000', '#FFA500', '#adff2f', '#ECF0F1', '#DE3163']
+colors = ['#33FFF3', '#008000', '#0000ff', '#ffff00', '#FF33F0', '#ff0000', '#FFA500', '#adff2f', '#ECF0F1', '#DE3163', '#9A7EFC']
 
 # extract languages and their sizes to lists for plotting
 languages = list(all_languages.keys())
