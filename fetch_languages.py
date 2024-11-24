@@ -37,6 +37,7 @@ repos = [
     'navpav2002/Prod-Cat',
     'navpav2002/SAP-Fiori-UX400',
     'navpav2002/sapui5-dev',
+    'navpav2002/JWT'
 ]
 
 # initialize a dictionary to store language data
