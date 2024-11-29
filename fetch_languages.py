@@ -20,7 +20,7 @@ headers = {
 
 # list of private repositories to analyze
 repos = [
-    'navpav2002/react-int',
+    #'navpav2002/react-int',
     'navpav2002/Assembly',
     'navpav2002/Docker_INT',
     'navpav2002/JS-AA1',
