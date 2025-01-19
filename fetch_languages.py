@@ -38,7 +38,7 @@ repos = [
     'navpav2002/SAP-Fiori-UX400',
     'navpav2002/sapui5-dev',
     'navpav2002/JWT',
-    'navpav2002/pg'
+    #'navpav2002/pg'
 ]
 
 # initialize a dictionary to store language data
@@ -59,7 +59,7 @@ for repo in repos:
         print(f"Error fetching data for repo {repo}: {response.text}")
 
 # define custom colors for the bars in the bar chart
-colors = ['#33FFF3', '#008000', '#0000ff', '#ffff00', '#FF33F0', '#ff0000', '#FFA500', '#adff2f', '#ECF0F1', '#DE3163', '#9A7EFC', '#8ed4cd', '#fb786e']
+colors = ['#33FFF3', '#008000', '#0000ff', '#ffff00', '#FF33F0', '#ff0000', '#FFA500', '#adff2f', '#ECF0F1', '#DE3163', '#9A7EFC', '#8ed4cd']
 
 # extract languages and their sizes to lists for plotting
 languages = list(all_languages.keys())
