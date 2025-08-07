@@ -38,6 +38,7 @@ repos = [
     'navpav2002/SAP-Fiori-UX400',
     'navpav2002/sapui5-dev',
     'navpav2002/JWT',
+    'navpav2002/BMP_54_MASM',
     #'navpav2002/pg'
 ]
 
